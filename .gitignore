@@ -6,7 +6,6 @@
 
 # built output
 /dist
-/build
 /.cache
 
 
