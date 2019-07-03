@@ -1,18 +1,19 @@
 import React, { useContext } from "react";
 import { AppContext } from "./context";
 import TodosItem from "./TodosItem";
+import actions from "./actions";
 
 function App() {
   const { state, dispatch } = useContext(AppContext);
 
   return (
-    <React.Fragment>
-      <h1>Todo App</h1>
-      <button onClick={() => dispatch({ type: "add" })}>Add</button>
+    <div>
+      <h1>TODOs</h1>
+      <button onClick={() => dispatch(actions.add())}>Add</button>
       {state.map(item => (
         <TodosItem key={item.id} {...item} />
       ))}
-    </React.Fragment>
+    </div>
   );
 }
 

@@ -1,8 +1,10 @@
+import actionTypes from "./actionTypes";
+
 const initialState = [];
 
 function reducer(state, action) {
   switch (action.type) {
-    case "add":
+    case actionTypes.ADD:
       return [
         ...state,
         {
@@ -11,10 +13,9 @@ function reducer(state, action) {
           completed: false
         }
       ];
-    case "update":
+    case actionTypes.UPDATE:
       return state.map(item => {
         if (item.id === action.payload.id) {
-          console.log({ ...item, ...action.payload });
           return { ...item, ...action.payload };
         }
         return item;

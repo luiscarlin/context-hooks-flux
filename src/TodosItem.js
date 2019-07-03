@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { AppContext } from "./context";
+import actions from "./actions";
 
 function TodosItem({ id, text }) {
   const { state, dispatch } = useContext(AppContext);
@@ -9,12 +10,7 @@ function TodosItem({ id, text }) {
       <input
         type="text"
         value={text}
-        onChange={event =>
-          dispatch({
-            type: "update",
-            payload: { id: id, text: event.target.value }
-          })
-        }
+        onChange={event => dispatch(actions.updateText(id, event.target.value))}
       />
       <button>delete</button>
     </div>
