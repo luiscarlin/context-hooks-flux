@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <h1>TUDU</h1>
+      <h1>TUDUs</h1>
       <button onClick={() => dispatch(actions.add())}>Add</button>
       {state.map(item => (
         <TodosItem key={item.id} {...item} />
