@@ -1,46 +1,22 @@
-import React, { useReducer, useContext } from "react";
-
-function appReducer(state, action) {
-  switch (action.type) {
-    case "add":
-      return [
-        ...state,
-        {
-          id: Date.now(),
-          text: "",
-          completed: false
-        }
-      ];
-    case "update":
-      return state.map(item => {
-        if (item.id === action.payload.id) {
-          console.log({ ...item, ...action.payload });
-          return { ...item, ...action.payload };
-        }
-        return item;
-      });
-    default:
-      return state;
-  }
-}
-
-const Context = React.createContext();
+import React, { useContext } from "react";
+import { AppState, AppContext } from "./context";
 
 function App() {
-  const [state, dispatch] = useReducer(appReducer, []);
+  const { state, dispatch } = useContext(AppContext);
+
   return (
-    <Context.Provider value={dispatch}>
+    <React.Fragment>
       <h1>Todo App</h1>
       <button onClick={() => dispatch({ type: "add" })}>Add</button>
       {state.map(item => (
         <TodosItem key={item.id} {...item} />
       ))}
-    </Context.Provider>
+    </React.Fragment>
   );
 }
 
 function TodosItem({ id, completed, text }) {
-  const dispatch = useContext(Context);
+  const { state, dispatch } = useContext(AppContext);
   return (
     <div>
       <input type="checkbox" />
