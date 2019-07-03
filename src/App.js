@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { AppState, AppContext } from "./context";
+import { AppContext } from "./context";
+import TodosItem from "./TodosItem";
 
 function App() {
   const { state, dispatch } = useContext(AppContext);
@@ -12,26 +13,6 @@ function App() {
         <TodosItem key={item.id} {...item} />
       ))}
     </React.Fragment>
-  );
-}
-
-function TodosItem({ id, completed, text }) {
-  const { state, dispatch } = useContext(AppContext);
-  return (
-    <div>
-      <input type="checkbox" />
-      <input
-        type="text"
-        value={text}
-        onChange={event =>
-          dispatch({
-            type: "update",
-            payload: { id: id, text: event.target.value }
-          })
-        }
-      />
-      <button>delete</button>
-    </div>
   );
 }
 
