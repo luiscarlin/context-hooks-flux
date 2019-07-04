@@ -7,13 +7,13 @@ function App() {
   const { state, dispatch } = useContext(AppContext);
 
   return (
-    <div>
+    <main>
       <h1>TUDUs</h1>
       <button onClick={() => dispatch(actions.add())}>Add</button>
       {state.map(item => (
         <TodosItem key={item.id} {...item} />
       ))}
-    </div>
+    </main>
   );
 }
 
