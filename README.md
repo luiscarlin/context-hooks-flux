@@ -1,6 +1,1 @@
-## Context Hooks Flux
-
-Flux pattern using
-
-- Parcel
-- React
+## Yet Another TODO App
