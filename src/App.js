@@ -9,7 +9,7 @@ function App() {
 
   return (
     <main className="app">
-      <h1>TUDUs</h1>
+      <h1>Do this</h1>
       <button onClick={() => dispatch(actions.add())}>Add</button>
       {state.map(item => (
         <TodosItem key={item.id} {...item} />
