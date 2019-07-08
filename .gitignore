@@ -7,5 +7,6 @@
 # built output
 /dist
 /.cache
+yarn-error.log
 
 
