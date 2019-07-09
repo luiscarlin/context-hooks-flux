@@ -19,7 +19,7 @@
   },
   "jest": {
     "setupFilesAfterEnv": [
-      "./src/jest.config.js"
+      "<rootDir>src/jest.config.js"
     ]
   },
   "scripts": {
