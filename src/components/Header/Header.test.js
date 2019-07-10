@@ -11,11 +11,11 @@ describe("Header", () => {
   beforeEach(() => {
     wrapper = render(<Header />);
   });
-  it("renders the title", () => {
+  it("shows the title", () => {
     expect(wrapper.getByTestId("header__title")).toHaveTextContent("Do this");
   });
 
-  it("renders the current date", () => {
+  it("shows the current date", () => {
     expect(wrapper.getByTestId("header__date")).toHaveTextContent(
       "Monday, July 8th"
     );

@@ -11,10 +11,10 @@ function App() {
   return (
     <main id="main">
       <Header />
-      <button onClick={() => dispatch(actions.add())}>Add</button>
+      {/* <button onClick={() => dispatch(actions.add())}>Add</button>
       {state.map(item => (
         <TodosItem key={item.id} {...item} />
-      ))}
+      ))} */}
     </main>
   );
 }
