@@ -18,6 +18,11 @@
     "parcel-bundler": "^1.12.3",
     "sass": "^1.22.3"
   },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>src/jest.config.js"
+    ]
+  },
   "scripts": {
     "start": "parcel index.html --port 3000 --open",
     "build": "parcel build index.html",

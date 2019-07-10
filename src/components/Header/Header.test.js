@@ -1,10 +1,5 @@
 import React from "react";
-import { render, cleanup } from "@testing-library/react";
 import Header from "./Header";
-import "@testing-library/jest-dom/extend-expect";
-import moment from "moment";
-
-afterEach(cleanup);
 
 jest.mock("moment", () => () => ({
   format: () => "Monday, July 8th"
