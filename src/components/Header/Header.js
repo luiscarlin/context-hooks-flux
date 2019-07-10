@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-// import "./header.scss";
+import "./header.scss";
 
 function Header() {
   return (
