@@ -12,12 +12,10 @@ describe("Header", () => {
     wrapper = render(<Header />);
   });
   it("shows the title", () => {
-    expect(wrapper.getByTestId("header__title")).toHaveTextContent("Do this");
+    expect(wrapper.getByTestId("title")).toHaveTextContent("Do this");
   });
 
   it("shows the current date", () => {
-    expect(wrapper.getByTestId("header__date")).toHaveTextContent(
-      "Monday, July 8th"
-    );
+    expect(wrapper.getByTestId("date")).toHaveTextContent("Monday, July 8th");
   });
 });

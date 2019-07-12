@@ -4,6 +4,7 @@ import TodosItem from "./TodosItem";
 import actions from "./actions";
 import Header from "./components/Header";
 import "./app.scss";
+import Todo from "./components/Todo";
 
 function App() {
   const { state, dispatch } = useContext(AppContext);
@@ -11,6 +12,11 @@ function App() {
   return (
     <main id="main">
       <Header />
+      <Todo
+        onTextUpdate={value => alert(`updated with value: ${value}`)}
+        onDelete={() => alert("you clicked delete")}
+        text={"some text here"}
+      />
       {/* <button onClick={() => dispatch(actions.add())}>Add</button>
       {state.map(item => (
         <TodosItem key={item.id} {...item} />

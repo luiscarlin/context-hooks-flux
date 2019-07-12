@@ -1,8 +1,22 @@
 import React from "react";
 import "./todo.scss";
+import CloseIcon from "./CloseIcon";
 
-function Todo({ text }) {
-  return <div data-testid="todo__text">{text}</div>;
+function Todo({ text, onTextUpdate, onDelete, onToggle }) {
+  return (
+    <>
+      <input data-testid="checkbox" type="checkbox" onClick={onToggle} />
+      <input
+        data-testid="input-text"
+        type="text"
+        onChange={event => onTextUpdate(event.target.value)}
+        value={text}
+      />
+      <button data-testid="delete-button" onClick={onDelete}>
+        <CloseIcon />
+      </button>
+    </>
+  );
 }
 
 export default Todo;
