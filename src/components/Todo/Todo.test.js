@@ -12,6 +12,7 @@ describe("Todo", () => {
     wrapper = render(
       <Todo
         text={"something here"}
+        isCompleted={true}
         onTextUpdate={onTextUpdateMock}
         onDelete={onDeleteMock}
         onToggle={onToggleMock}
@@ -35,6 +36,11 @@ describe("Todo", () => {
     fireEvent.click(deleteButton);
 
     expect(onDeleteMock).toHaveBeenCalled();
+  });
+
+  it("has a checkbox", () => {
+    const checkbox = wrapper.getByTestId("checkbox");
+    expect(checkbox.checked).toBe(true);
   });
 
   it("calls callback when checkbox is toggled", () => {

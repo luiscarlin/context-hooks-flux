@@ -16,6 +16,8 @@ function App() {
         onTextUpdate={value => alert(`updated with value: ${value}`)}
         onDelete={() => alert("you clicked delete")}
         text={"some text here"}
+        isCompleted={true}
+        onToggle={() => console.log("toggled")}
       />
       {/* <button onClick={() => dispatch(actions.add())}>Add</button>
       {state.map(item => (
