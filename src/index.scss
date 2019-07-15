@@ -32,4 +32,11 @@ body {
     font-size: 2rem;
     font-weight: normal;
   }
+
+  input[type="text"] {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: normal;
+    color: $onSurface;
+  }
 }
