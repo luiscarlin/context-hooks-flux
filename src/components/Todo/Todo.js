@@ -1,13 +1,20 @@
 import React from "react";
 import "./todo.scss";
 import CloseIcon from "./CloseIcon";
+import CheckmarkIcon from "./CheckmarkIcon";
 
 const PLACEHOLDER_TEXT = "What do you want to do?....";
 
 function Todo({ text, onTextUpdate, isCompleted, onDelete, onToggle }) {
   return (
     <div className="todo">
-      <div className="todo__checkbox">{isCompleted && "C"}</div>
+      <button
+        className="todo__checkbox"
+        data-testid="checkbox"
+        onClick={onToggle}
+      >
+        {isCompleted && <CheckmarkIcon />}
+      </button>
       <input
         data-testid="input-text"
         className="todo__task"
