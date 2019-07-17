@@ -10,12 +10,18 @@
   background: $surface;
 
   .todo__checkbox {
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
     margin: 0 1rem;
     border-style: solid;
     border-width: 1px;
     border-color: $onSurface;
+    position: relative;
+    svg {
+      position: absolute;
+      top: -10px;
+      left: -5px;
+    }
   }
 
   .todo__task {
