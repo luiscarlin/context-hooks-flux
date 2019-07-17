@@ -8,13 +8,9 @@ const PLACEHOLDER_TEXT = "What do you want to do?....";
 function Todo({ text, onTextUpdate, isCompleted, onDelete, onToggle }) {
   return (
     <div className="todo">
-      <button
-        className="todo__checkbox"
-        data-testid="checkbox"
-        onClick={onToggle}
-      >
+      <div className="todo__checkbox" data-testid="checkbox" onClick={onToggle}>
         {isCompleted && <CheckmarkIcon />}
-      </button>
+      </div>
       <input
         data-testid="input-text"
         className="todo__task"
