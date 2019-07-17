@@ -35,8 +35,12 @@ body {
 
   input[type="text"] {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: normal;
     color: $onSurface;
+  }
+
+  *:focus {
+    outline: none;
   }
 }

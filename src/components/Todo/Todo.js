@@ -19,13 +19,13 @@ function Todo({ text, onTextUpdate, isCompleted, onDelete, onToggle }) {
         onChange={event => onTextUpdate(event.target.value)}
         value={text}
       />
-      <button
+      <div
         data-testid="delete-button"
         className="todo__delete"
         onClick={onDelete}
       >
         <CloseIcon />
-      </button>
+      </div>
     </div>
   );
 }
