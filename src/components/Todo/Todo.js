@@ -1,7 +1,7 @@
 import React from "react";
 import "./todo.scss";
-import CloseIcon from "./CloseIcon";
-import CheckmarkIcon from "./CheckmarkIcon";
+import CloseIcon from "../../assets/CloseIcon";
+import CheckmarkIcon from "../../assets/CheckmarkIcon";
 
 const PLACEHOLDER_TEXT = "What do you want to do?....";
 

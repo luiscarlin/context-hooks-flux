@@ -5,6 +5,7 @@ import actions from "./actions";
 import Header from "./components/Header";
 import "./app.scss";
 import Todo from "./components/Todo";
+import AddIcon from "./assets/AddIcon";
 
 function App() {
   const { state, dispatch } = useContext(AppContext);
@@ -23,6 +24,7 @@ function App() {
       {state.map(item => (
         <TodosItem key={item.id} {...item} />
       ))} */}
+      <AddIcon />
     </main>
   );
 }
