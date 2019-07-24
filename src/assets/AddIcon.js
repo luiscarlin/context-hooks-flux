@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddIcon() {
+function AddIcon({ onClick = () => {} }) {
   return (
     <svg
       width="95"
@@ -8,6 +8,7 @@ function AddIcon() {
       viewBox="0 0 95 95"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={onClick}
     >
       <g filter="url(#add-icon)">
         <circle cx="45.5" cy="46.5" r="33.5" fill="#486FFF" />
