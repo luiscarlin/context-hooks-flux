@@ -1,4 +1,5 @@
 import React from "react";
+import "./add-icon.scss";
 
 function AddIcon({ onClick = () => {} }) {
   return (
@@ -8,9 +9,9 @@ function AddIcon({ onClick = () => {} }) {
       viewBox="0 0 95 95"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      onClick={onClick}
+      className="add-icon"
     >
-      <g filter="url(#add-icon)">
+      <g filter="url(#add-icon)" onClick={onClick}>
         <circle cx="45.5" cy="46.5" r="33.5" fill="#486FFF" />
         <path
           d="M48.2325 44.7653H57.7481V48.8669H48.2325V59.6481H43.8731V48.8669H34.3575V44.7653H43.8731V34.8044H48.2325V44.7653Z"
