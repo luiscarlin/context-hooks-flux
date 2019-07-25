@@ -1,5 +1,5 @@
 import React from "react";
-import AddIcon from "../AddIcon/AddIcon";
+import AddIcon from "../AddIcon";
 import "./add-button.scss";
 
 function AddButton({ onClickHandler }) {

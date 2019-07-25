@@ -1,3 +1,3 @@
-import AddButton from "./AddButton";
+import AddButtonConnector from "./AddButtonConnector";
 
-export default AddButton;
+export default AddButtonConnector;

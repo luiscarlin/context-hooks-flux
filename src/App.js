@@ -23,7 +23,7 @@ function App() {
       {/* {state.map(item => (
         <Todo key={item.id} {...item} />
       ))} */}
-      <AddButton onClickHandler={() => dispatch(actions.add())} />
+      <AddButton />
     </main>
   );
 }
