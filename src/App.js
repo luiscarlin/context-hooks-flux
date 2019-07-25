@@ -13,16 +13,16 @@ function App() {
   return (
     <main id="main">
       <Header />
-      <Todo
-        onTextUpdate={value => alert(`updated with value: ${value}`)}
-        onDelete={() => alert("you clicked delete")}
-        text={"some text here"}
-        isCompleted={true}
-        onToggle={() => console.log("toggled")}
-      />
-      {/* {state.map(item => (
-        <Todo key={item.id} {...item} />
-      ))} */}
+      {state.map(item => (
+        // <Todo key={item.id} {...item} />
+        <Todo
+          onTextUpdate={value => dispatch(actions.updateText(item.id, value))}
+          onDelete={() => alert("you clicked delete")}
+          text={item.text}
+          isCompleted={item.completed}
+          onToggle={() => dispatch(actions.toggle(item.id, !item.completed))}
+        />
+      ))}
       <AddButton />
     </main>
   );

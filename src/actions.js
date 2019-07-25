@@ -7,4 +7,9 @@ const updateText = (id, text) => ({
   payload: { id, text }
 });
 
-export default { add, updateText };
+const toggle = (id, completed) => ({
+  type: actionTypes.TOGGLE,
+  payload: { id, completed }
+});
+
+export default { add, updateText, toggle };

@@ -20,6 +20,14 @@ function reducer(state, action) {
         }
         return item;
       });
+    case actionTypes.TOGGLE:
+      return state.map(item => {
+        if (item.id === action.payload.id) {
+          console.log(action.payload);
+          return { ...item, ...action.payload };
+        }
+        return item;
+      });
     default:
       return state;
   }
