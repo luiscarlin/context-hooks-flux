@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { AppContext } from "./context";
 import TodosItem from "./TodosItem";
 import actions from "./actions";
-import Header from "./components/presenters/Header";
+import Header from "./components/Header";
 import "./app.scss";
-import Todo from "./components/presenters/Todo";
-import AddButton from "./components/presenters/AddButton";
+import Todo from "./components/Todo";
+import AddButton from "./components/AddButton";
 
 function App() {
   const { state, dispatch } = useContext(AppContext);
