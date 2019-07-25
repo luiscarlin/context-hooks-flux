@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { AppContext } from "./context";
 import TodosItem from "./TodosItem";
 import actions from "./actions";
-import Header from "./components/Header";
+import Header from "./components/presenters/Header";
 import "./app.scss";
-import Todo from "./components/Todo";
-import AddButton from "./components/AddButton";
+import Todo from "./components/presenters/Todo";
+import AddButton from "./components/presenters/AddButton";
 
 function App() {
   const { state, dispatch } = useContext(AppContext);
@@ -20,11 +20,10 @@ function App() {
         isCompleted={true}
         onToggle={() => console.log("toggled")}
       />
-      {/* <button onClick={() => dispatch(actions.add())}>Add</button>
-      {state.map(item => (
-        <TodosItem key={item.id} {...item} />
+      {/* {state.map(item => (
+        <Todo key={item.id} {...item} />
       ))} */}
-      <AddButton onClickHandler={() => alert("you tapped add")} />
+      <AddButton onClickHandler={() => dispatch(actions.add())} />
     </main>
   );
 }
