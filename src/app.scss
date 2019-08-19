@@ -7,6 +7,7 @@
   align-items: center;
   padding: 3rem;
   background: black;
+  min-width: 300px;
 
   @media #{$desktopOnly} {
     // padding: 10rem;
@@ -17,7 +18,7 @@
     margin-top: 4rem;
 
     .todo-list__item {
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
   }
 }
