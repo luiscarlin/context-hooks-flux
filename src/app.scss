@@ -5,20 +5,36 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   padding: 3rem;
   background: black;
   min-width: 300px;
-
-  @media #{$desktopOnly} {
-    // padding: 10rem;
-  }
+  max-width: 1200px;
 
   .todo-list {
     width: 100%;
     margin-top: 4rem;
 
+    @media #{$desktopOnly} {
+      margin-top: 10rem;
+      padding: 0 10rem;
+    }
+
+    @media #{$tabletOnly} {
+      margin-top: 8rem;
+      padding: 0 8rem;
+    }
+
+    @media #{$mobileOnly} {
+      padding: 0rem;
+    }
+
     .todo-list__item {
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
+
+      @media #{$mobileOnly} {
+        margin-bottom: 3rem;
+      }
     }
   }
 }
