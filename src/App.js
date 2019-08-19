@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { AppContext } from "./context";
-import TodosItem from "./TodosItem";
 import actions from "./actions";
 import Header from "./components/Header";
 import "./app.scss";
@@ -10,14 +9,18 @@ import AddButton from "./components/AddButton";
 function App() {
   const { state, dispatch } = useContext(AppContext);
 
+  if (state.length === 0) {
+    dispatch(actions.add());
+  }
+
   return (
     <main id="main">
       <Header />
       {state.map(item => (
-        // <Todo key={item.id} {...item} />
         <Todo
+          key={item.id}
           onTextUpdate={value => dispatch(actions.updateText(item.id, value))}
-          onDelete={() => alert("you clicked delete")}
+          onDelete={() => dispatch(actions.remove(item.id))}
           text={item.text}
           isCompleted={item.completed}
           onToggle={() => dispatch(actions.toggle(item.id, !item.completed))}

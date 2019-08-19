@@ -12,4 +12,9 @@ const toggle = (id, completed) => ({
   payload: { id, completed }
 });
 
-export default { add, updateText, toggle };
+const remove = id => ({
+  type: actionTypes.REMOVE,
+  payload: { id }
+});
+
+export default { add, updateText, toggle, remove };

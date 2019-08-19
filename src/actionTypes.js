@@ -1,12 +1,12 @@
 const ADD = "ADD";
-const DELETE = "DELETE";
+const REMOVE = "REMOVE";
 const COMPLETE = "COMPLETE";
 const UPDATE = "UPDATE";
 const TOGGLE = "TOGGLE";
 
 export default {
   ADD,
-  DELETE,
+  REMOVE,
   COMPLETE,
   UPDATE,
   TOGGLE
