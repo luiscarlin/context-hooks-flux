@@ -7,4 +7,17 @@
   align-items: center;
   padding: 3rem;
   background: black;
+
+  @media #{$desktopOnly} {
+    // padding: 10rem;
+  }
+
+  .todo-list {
+    width: 100%;
+    margin-top: 4rem;
+
+    .todo-list__item {
+      margin-bottom: 4rem;
+    }
+  }
 }

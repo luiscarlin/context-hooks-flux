@@ -16,16 +16,24 @@ function App() {
   return (
     <main id="main">
       <Header />
-      {state.map(item => (
-        <Todo
-          key={item.id}
-          onTextUpdate={value => dispatch(actions.updateText(item.id, value))}
-          onDelete={() => dispatch(actions.remove(item.id))}
-          text={item.text}
-          isCompleted={item.completed}
-          onToggle={() => dispatch(actions.toggle(item.id, !item.completed))}
-        />
-      ))}
+      <div className="todo-list">
+        {state.map(item => (
+          <div className="todo-list__item">
+            <Todo
+              key={item.id}
+              onTextUpdate={value =>
+                dispatch(actions.updateText(item.id, value))
+              }
+              onDelete={() => dispatch(actions.remove(item.id))}
+              text={item.text}
+              isCompleted={item.completed}
+              onToggle={() =>
+                dispatch(actions.toggle(item.id, !item.completed))
+              }
+            />
+          </div>
+        ))}
+      </div>
       <AddButton />
     </main>
   );
